@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+:root {
+  --light: #fff;
+  --dark: #181b24;
+  --grey: #899495;
+  --orange: #fc5130;
+  --SectionGrey: #f2f2f2;
+}
+
+/* header  */
+.header {
+  min-height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url(./img/header1.jpg) center/cover fixed no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAV */
+
+.nav-container {
+  background: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
+  border-bottom: 0.5rem solid var(--dark);
+}
+
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.2s linear;
+  background: var(--grey);
+}
+
+.nav-link {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--orange);
+  transition: all 1s linear;
+}
+
+.nav-link:hover {
+  background: var(--light);
+  padding-left: 1.5rem;
+  cursor: pointer;
+}
+
+.show-links {
+  height: 288px;
+  background: var(--grey);
+  transition: all 0.2s linear;
+}
+.nav-logo {
+  font-size: 3rem;
+  align-self: center;
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.nav-btn {
+  font-size: 3rem;
+  align-self: center;
+  cursor: pointer;
+}
+
+/* BANNER */
+
+.banner-container {
+  flex: 1 0 auto; /*always grows as much it need never shrins*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-jobs {
+  display: flex;
+}
+
+@media screen and (min-width: 833px) {
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 0.5rem solid var(--dark);
+  }
+
+  .nav-header {
+    border: none;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-links {
+    background: transparent;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex: 1 0 auto;
+    align-self: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-link:hover {
+    padding-left: 1rem;
+    color: black;
+  }
+}
